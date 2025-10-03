@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class CaloriesCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input durations
+        System.out.print("Enter minutes of running: ");
+        int running = sc.nextInt();
+        System.out.print("Enter minutes of push-ups: ");
+        int pushUps = sc.nextInt();
+        System.out.print("Enter minutes of planks: ");
+        int planks = sc.nextInt();
+
+        // Calculations
+        int caloriesRunning = (running / 5) * 60;
+        int caloriesPushUps = (pushUps / 30) * 200;
+        int caloriesPlanks = planks * 5;
+
+        int totalCalories = caloriesRunning + caloriesPushUps + caloriesPlanks;
+
+        // Output
+        System.out.println("Calories burned:");
+        System.out.println("Running: " + caloriesRunning);
+        System.out.println("Push-ups: " + caloriesPushUps);
+        System.out.println("Planks: " + caloriesPlanks);
+        System.out.println("Total: " + totalCalories);
+
+        sc.close();
+    }
+}
