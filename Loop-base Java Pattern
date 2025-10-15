@@ -1,0 +1,64 @@
+Complete Java Code for Case 1 - Case 6
+
+public class PatternCases {
+    public static void main(String[] args) {
+        // -------- Case 1 --------
+        System.out.println("Case 1\n");
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 8; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+
+        // -------- Case 2 --------
+        System.out.println("\nCase 2\n");
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 7; j++) {
+                System.out.print((2 * j - 1) + (i - 1) + " ");
+            }
+            System.out.println();
+        }
+
+        // -------- Case 3 --------
+        System.out.println("\nCase 3\n");
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            }
+        }
+
+        // -------- Case 4 --------
+        System.out.println("\nCase 4\n");
+        for (int i = 1; i <= 8; i++) {
+            for (int j = i; j <= 8; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+
+        // -------- Case 5 (Fibonacci) --------
+        System.out.println("\nCase 5\n");
+        int a = 0, b = 1;
+        System.out.print(a + " " + b + " ");
+        for (int i = 3; i <= 10; i++) {
+            int c = a + b;
+            System.out.print(c + " ");
+            a = b;
+            b = c;
+        }
+        System.out.println();
+
+        // -------- Case 6 (Tribonacci-like series) --------
+        System.out.println("\nCase 6\n");
+        int x = 0, y = 0, z = 1;
+        System.out.print(x + " " + y + " " + z + " ");
+        for (int i = 4; i <= 10; i++) {
+            int next = x + y + z;
+            System.out.print(next + " ");
+            x = y;
+            y = z;
+            z = next;
+        }
+    }
+}
