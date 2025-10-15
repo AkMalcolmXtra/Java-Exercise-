@@ -1,0 +1,62 @@
+Flowchart 
+          ┌──────────────────────────┐
+          │          Start           │
+          └───────────┬──────────────┘
+                      │
+          ┌───────────▼──────────────┐
+          │ List all assignments     │
+          └───────────┬──────────────┘
+                      │
+          ┌───────────▼──────────────┐
+          │ Select one assignment    │
+          └───────────┬──────────────┘
+                      │
+          ┌───────────▼──────────────┐
+          │ Read instructions        │
+          └───────────┬──────────────┘
+                      │
+          ┌───────────▼──────────────┐
+          │ Gather materials needed  │
+          └───────────┬──────────────┘
+                      │
+          ┌───────────▼──────────────┐
+          │ Work on assignment       │
+          └───────────┬──────────────┘
+                      │
+          ┌───────────▼──────────────┐
+          │ Completed? (Yes / No)    │
+          └───────┬─────────┬────────┘
+                  │         │
+                 No         Yes
+                  │         │
+          ┌───────▼─┐   ┌──▼────────────────┐
+          │ Keep    │   │ Review and submit │
+          │ working │   └───────┬───────────┘
+          └─────────┘           │
+                                 │
+                    ┌────────────▼────────────┐
+                    │ All assignments done?   │
+                    └───────┬─────────┬──────┘
+                            │         │
+                           No         Yes
+                            │         │
+                    ┌───────▼───┐   ┌──▼───────────┐
+                    │ Pick next │   │     End       │
+                    │ assignment│   └───────────────┘
+                    └───────────┘
+
+Pseudo
+BEGIN
+    CREATE a list of all assignments
+    FOR each assignment in the list DO
+        DISPLAY assignment name
+        READ and understand instructions
+        GATHER necessary materials
+        WHILE assignment not completed DO
+            WORK on assignment
+        END WHILE
+        REVIEW the work
+        SUBMIT the assignment
+    END FOR
+    DISPLAY "All assignments completed successfully!"
+END
